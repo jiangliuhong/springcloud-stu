@@ -2,6 +2,7 @@ package pers.jarome.scs.student;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @date 2018/9/2 13:51
  */
 @SpringBootApplication
+@EnableAutoConfiguration
 @EnableEurekaClient
 @EnableTransactionManagement
 @MapperScan(value = "pers.jarome.scs.student.core.dao")

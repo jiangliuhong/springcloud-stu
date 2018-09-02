@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pers.jarome.scs.student.core.dao.StudentDao">
-	<resultMap id="result_Student_Map" type="pers.jarome.scs.student.core.model.Student">
+	<resultMap id="result_Student_Map" type="pers.jarome.scs.core.model.Student">
 		<id column="id" property="id" jdbcType="VARCHAR" />
 		<result column="name" property="name" jdbcType="VARCHAR"  />
 		<result column="num" property="num" jdbcType="VARCHAR"  />
 	</resultMap>
 
-	<insert id="insert" parameterType="pers.jarome.scs.student.core.model.Student">
+	<insert id="insert" parameterType="pers.jarome.scs.core.model.Student">
 		insert into student (id,name,num) values (#{id,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{num,jdbcType=VARCHAR})
 	</insert>
 

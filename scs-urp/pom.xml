@@ -43,6 +43,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!-- db -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -60,6 +64,13 @@
             <version>8.0.12</version>
         </dependency>
         <!-- db -->
+        <!-- scs -->
+        <dependency>
+            <groupId>pers.jarome.scs</groupId>
+            <artifactId>scs-bean</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- scs -->
     </dependencies>
 
 </project>

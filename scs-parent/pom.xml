@@ -19,6 +19,7 @@
         <module>../scs-eureka-client</module>
         <module>../scs-urp</module>
         <module>../scs-student</module>
+        <module>../scs-bean</module>
     </modules>
 
     <properties>

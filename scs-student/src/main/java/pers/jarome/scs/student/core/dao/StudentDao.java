@@ -1,6 +1,7 @@
 package pers.jarome.scs.student.core.dao;
 
-import pers.jarome.scs.student.core.model.Student;
+
+import pers.jarome.scs.core.model.Student;
 
 public interface StudentDao {
 

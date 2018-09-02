@@ -64,6 +64,13 @@
             <version>8.0.12</version>
         </dependency>
         <!-- db -->
+        <!-- scs -->
+        <dependency>
+            <groupId>pers.jarome.scs</groupId>
+            <artifactId>scs-bean</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- scs -->
     </dependencies>
 
 </project>

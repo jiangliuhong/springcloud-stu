@@ -1,4 +1,4 @@
-package pers.jarome.scs.student.core.model;
+package pers.jarome.scs.core.model;
 
 /**
  * student实体类
