@@ -2,7 +2,7 @@ spring:
     banner:
       charset: UTF-8
     datasource:
-      name: studentDatasource
+      name: urpDatasource
       type: com.alibaba.druid.pool.DruidDataSource
       #druid相关配置
       druid:
@@ -33,4 +33,4 @@ spring:
         max-pool-prepared-statement-per-connection-size: 0
         max-open-prepared-statements: 0
 mybatis:
-  mapper-locations: classpath:mapper/*/*.xml
+  mapper-locations: classpath:mapper/*.xml
