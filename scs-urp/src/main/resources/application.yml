@@ -1,0 +1,12 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: scs-urp
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka/
+  instance:
+    preferIpAddress: true
+    instanceId:  ${spring.cloud.client.ip-address}:${server.port}
