@@ -1,0 +1,16 @@
+server:
+  port: 8001
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: 127.0.0.1
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    nonSecurePort: ${server.port}
+    preferIpAddress: true
+spring:
+  application:
+    name: scs-eureka
