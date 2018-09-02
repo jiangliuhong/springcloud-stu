@@ -16,6 +16,7 @@
     </parent>
     <modules>
         <module>../scs-eureka</module>
+        <module>../scs-eureka-client</module>
     </modules>
 
     <properties>
