@@ -11,6 +11,8 @@ eureka:
     instanceId: ${spring.cloud.client.ip-address}:${server.port}
     nonSecurePort: ${server.port}
     preferIpAddress: true
+  server:
+    enable-self-preservation: false
 spring:
   application:
     name: scs-eureka
