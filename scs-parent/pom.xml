@@ -21,6 +21,7 @@
         <module>../scs-student</module>
         <module>../scs-bean</module>
         <module>../scs-act</module>
+        <module>../scs-config</module>
     </modules>
 
     <properties>
