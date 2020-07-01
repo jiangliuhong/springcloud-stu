@@ -17,3 +17,10 @@ spring:
           uri: https://www.baidu.com/
           predicates:
             - Path=/baidu
+  datasource:
+    druid:
+      url: jdbc:postgresql://127.0.0.1:5432/scs
+      username: sa
+      password: 6789@jkl
+      driver-class-name: org.postgresql.Driver
+      db-type:
