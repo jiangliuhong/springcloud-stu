@@ -1,0 +1,19 @@
+server:
+  port: 8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+spring:
+  application:
+    name: scs-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: baidu
+          uri: https://www.baidu.com/
+          predicates:
+            - Path=/baidu

@@ -11,6 +11,8 @@
 
     <modules>
         <module>scs-eureka</module>
+        <module>scs-admin</module>
+        <module>scs-gateway</module>
     </modules>
 
 
@@ -26,6 +28,14 @@
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
