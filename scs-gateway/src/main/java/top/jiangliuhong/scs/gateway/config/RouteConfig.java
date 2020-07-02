@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/7/1 14:04
  * @version 1.0.0
  */
-@Configuration
+//@Configuration
 public class RouteConfig {
 
     @Bean

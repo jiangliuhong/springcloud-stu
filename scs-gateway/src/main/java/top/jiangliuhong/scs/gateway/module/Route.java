@@ -25,11 +25,14 @@ public class Route implements Serializable {
     @Column(name = "c_name")
     private String name;
 
-    @Column(name = "c_path")
-    private String path;
+    @Column(name = "c_predicates")
+    private String predicates;
 
     @Column(name = "c_url")
     private String url;
+
+    @Column(name = "c_filters")
+    private String filters;
 
     public String getId() {
         return id;
@@ -47,12 +50,12 @@ public class Route implements Serializable {
         this.name = name;
     }
 
-    public String getPath() {
-        return path;
+    public String getPredicates() {
+        return predicates;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setPredicates(String predicates) {
+        this.predicates = predicates;
     }
 
     public String getUrl() {
@@ -61,5 +64,13 @@ public class Route implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getFilters() {
+        return filters;
+    }
+
+    public void setFilters(String filters) {
+        this.filters = filters;
     }
 }

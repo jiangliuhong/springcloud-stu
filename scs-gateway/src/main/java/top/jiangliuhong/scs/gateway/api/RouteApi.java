@@ -20,6 +20,6 @@ public class RouteApi {
 
     @GetMapping("")
     public ResponseEntity<List<Route>> getRoute() {
-        return ResponseEntity.ok(routeService.getAll());
+        return ResponseEntity.ok(routeService.getRoutes());
     }
 }
