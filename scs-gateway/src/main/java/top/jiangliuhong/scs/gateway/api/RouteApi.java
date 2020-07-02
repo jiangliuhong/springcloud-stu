@@ -22,4 +22,10 @@ public class RouteApi {
     public ResponseEntity<List<Route>> getRoute() {
         return ResponseEntity.ok(routeService.getRoutes());
     }
+
+    @GetMapping("/refresh")
+    public ResponseEntity<String> refresh() {
+        routeService.loadRoute();
+        return ResponseEntity.ok("refresh ok");
+    }
 }

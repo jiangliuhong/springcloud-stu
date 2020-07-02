@@ -28,6 +28,7 @@
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
         <postgresql.version>42.2.14</postgresql.version>
+        <fastjson.version>1.2.70</fastjson.version>
     </properties>
 
     <dependencies>
@@ -56,6 +57,11 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
