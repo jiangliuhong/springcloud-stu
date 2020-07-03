@@ -18,8 +18,8 @@ spring:
           predicates:
             - Path=/baidu
   datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/scs
-    username: sa
+    url: jdbc:postgresql://172.25.16.246:6543/scs
+    username: postgres
     password: 6789@jkl
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.postgresql.Driver

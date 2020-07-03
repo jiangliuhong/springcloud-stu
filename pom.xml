@@ -13,6 +13,7 @@
         <module>scs-eureka</module>
         <module>scs-admin</module>
         <module>scs-gateway</module>
+        <module>scs-core</module>
     </modules>
 
 
@@ -29,6 +30,9 @@
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
         <postgresql.version>42.2.14</postgresql.version>
         <fastjson.version>1.2.70</fastjson.version>
+        <!-- scs module -->
+        <scs-core.version>1.0-SNAPSHOT</scs-core.version>
+        <!-- scs module -->
     </properties>
 
     <dependencies>
@@ -41,6 +45,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- scs module -->
+            <dependency>
+                <groupId>top.jiangliuhong</groupId>
+                <artifactId>scs-core</artifactId>
+                <version>${scs-core.version}</version>
+            </dependency>
+            <!-- scs module -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

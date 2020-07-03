@@ -92,5 +92,4 @@ public class RouteService {
         // 刷新路由
         ApplicationEventUtils.pushEvent(new RefreshRoutesEvent(this));
     }
-
 }
