@@ -1,6 +1,4 @@
 export default{
-    route:{
-        list: '/api/route',
-        refresh: '/api/route/refresh'
-    }
+    route: "/api/v1/route",
+    refreshRoute: "/api/v1/route/refresh"
 }

@@ -15,7 +15,6 @@ import org.springframework.cloud.gateway.filter.FilterDefinition;
 import org.springframework.cloud.gateway.handler.predicate.PredicateDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -23,8 +22,10 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 
 import reactor.core.publisher.Mono;
+import top.jiangliuhong.scs.gateway.bean.req.RouteQuery;
 import top.jiangliuhong.scs.gateway.module.Route;
 import top.jiangliuhong.scs.gateway.repository.RouteRepository;
+import top.jiangliuhong.scs.gateway.service.spec.RouteSpec;
 
 @Service
 public class RouteService {
@@ -37,16 +38,46 @@ public class RouteService {
     @Autowired
     private RouteDefinitionWriter routeDefinitionWriter;
 
-    private ApplicationEventPublisher publisher;
+    public List<Route> getRoutes() {
+        return getRoutes(null);
+    }
 
     /**
      * 查询所有配置
      * 
      * @return 路由配置
      */
-    public List<Route> getRoutes() {
-        Iterable<Route> all = routeRepository.findAll();
-        return Lists.newArrayList(all);
+    public List<Route> getRoutes(RouteQuery query) {
+        List<Route> res;
+        if (query == null) {
+            res = Lists.newArrayList(routeRepository.findAll());
+        } else {
+            // ExampleMatcher matcher = ExampleMatcher.matching()
+            // .withMatcher("id", ExampleMatcher.GenericPropertyMatchers.contains())
+            // .withMatcher("firstname", match -> match.startsWith());
+            // Example<Route> example = Example.of(new Route(),matcher);
+            res = routeRepository.findAll(new RouteSpec(query));
+        }
+        return res;
+    }
+
+    /**
+     * 保存路由信息
+     * 
+     * @param route 路由
+     * @return 路由
+     */
+    public Route save(Route route) {
+        return routeRepository.save(route);
+    }
+
+    /**
+     * 删除路由
+     * 
+     * @param id id
+     */
+    public void delete(String id) {
+        routeRepository.deleteById(id);
     }
 
     /**

@@ -12,13 +12,13 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "t_route",schema="db_base")
-@GenericGenerator(name = "jpa-uuid", strategy = "uuid")
+//@GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Route implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(generator = "jpa-uuid")
+//    @GeneratedValue(generator = "jpa-uuid")
     @Column(name = "c_id")
     private String id;
 
