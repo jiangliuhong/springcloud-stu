@@ -12,6 +12,10 @@ spring:
     name: scs-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: baidu
           uri: https://www.baidu.com/
