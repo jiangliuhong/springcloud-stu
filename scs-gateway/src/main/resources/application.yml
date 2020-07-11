@@ -17,10 +17,10 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: baidu
-          uri: https://www.baidu.com/
+        - id: myblog
+          uri: https://jiangliuhong.top
           predicates:
-            - Path=/baidu
+            - Path=/myblog/**
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/scs
     username: sa
