@@ -1,6 +1,6 @@
 module.exports = {
     publicPath: "./",
-    outputDir: "dist",
+    outputDir: "../../scs-gateway/src/main/resources/dist",
     assetsDir: "static",
     indexPath: "index.html",
     devServer: {
