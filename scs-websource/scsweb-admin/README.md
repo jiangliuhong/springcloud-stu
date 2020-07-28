@@ -1,4 +1,4 @@
-# scsweb-gateway
+# scsweb-admin
 
 ## Project setup
 ```
