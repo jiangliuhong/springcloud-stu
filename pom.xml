@@ -14,6 +14,7 @@
         <module>scs-admin</module>
         <module>scs-gateway</module>
         <module>scs-core</module>
+        <module>scs-components</module>
     </modules>
 
 
