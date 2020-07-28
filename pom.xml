@@ -9,11 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <name>父项目</name>
+
     <modules>
         <module>scs-eureka</module>
         <module>scs-admin</module>
         <module>scs-gateway</module>
-        <module>scs-core</module>
         <module>scs-components</module>
     </modules>
 

@@ -18,7 +18,7 @@ import top.jiangliuhong.scs.core.bean.res.ErrorResponse;
 /**
  *
  * ScsExceptionAdvice
- * 
+ *
  * @description 统一异常处理
  * @author jiangliuhong
  * @date 2020/7/3 10:38
@@ -32,7 +32,7 @@ public class ScsExceptionAdvice {
 
     /**
      * 异常拦截
-     * 
+     *
      * @param exception
      * @return
      */
