@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>top.jiangliuhong</groupId>
+    <groupId>top.jiangliuhong.scs</groupId>
     <artifactId>scs</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -16,6 +16,7 @@
         <module>scs-admin</module>
         <module>scs-gateway</module>
         <module>scs-components</module>
+        <module>scs-gen-test</module>
     </modules>
 
 
@@ -32,9 +33,15 @@
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
         <postgresql.version>42.2.14</postgresql.version>
         <fastjson.version>1.2.70</fastjson.version>
-        <!-- scs module -->
-        <scs-core.version>1.0-SNAPSHOT</scs-core.version>
-        <!-- scs module -->
+
+        <!-- mybatis 相关 -->
+        <mapper-generator.version>1.0.0</mapper-generator.version>
+        <tk.mybatis.version>4.0.0</tk.mybatis.version>
+        <mybatis-generator-core.version>1.3.6</mybatis-generator-core.version>
+        <tk.mybatis.mapper-spring-boot-starter.version>2.1.5</tk.mybatis.mapper-spring-boot-starter.version>
+        <!-- mybatis 相关 -->
+
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencies>
@@ -49,9 +56,14 @@
         <dependencies>
             <!-- scs module -->
             <dependency>
-                <groupId>top.jiangliuhong</groupId>
+                <groupId>top.jiangliuhong.scs</groupId>
                 <artifactId>scs-core</artifactId>
-                <version>${scs-core.version}</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.jiangliuhong.scs</groupId>
+                <artifactId>scs-datamodal-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <!-- scs module -->
             <dependency>
@@ -75,6 +87,39 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator-core.version}</version>
+            </dependency>
+            <!-- 通用 Mapper -->
+            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
+            <!-- 如果你只需要用到通用 Mapper 中的插件，可以只引入 mapper-generator -->
+            <!-- 注意，这个包不需要和上面的 mapper 同时引入，mapper 中包含 generator -->
+            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper-generator -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-generator</artifactId>
+                <version>${mapper-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk.mybatis.mapper-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

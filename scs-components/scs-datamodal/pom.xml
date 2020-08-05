@@ -3,21 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>scs</artifactId>
+        <artifactId>scs-components</artifactId>
         <groupId>top.jiangliuhong.scs</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>scs-components</artifactId>
+    <name>数据实体-父工程</name>
+    <artifactId>scs-datamodal</artifactId>
     <packaging>pom</packaging>
 
-    <name>组件-父工程</name>
     <modules>
-        <module>scs-core</module>
-        <module>scs-commons</module>
-        <module>scs-datamodal</module>
+        <module>scs-datamodal-base</module>
+        <module>scs-datamodal-common</module>
     </modules>
-
 
 </project>
