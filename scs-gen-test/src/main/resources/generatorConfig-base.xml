@@ -41,6 +41,8 @@
         </plugin>
 
         <commentGenerator type="top.jiangliuhong.scs.gen.ext.ScsCommentGenerator">
+            <property name="needsSwagger" value="true"/>
+            <property name="author" value="jiangliuhong"/>
            <!-- <property name="suppressDate" value="true" />
             <property name="suppressAllComments" value="true" />-->
         </commentGenerator>
@@ -54,8 +56,8 @@
                         password="">
         </jdbcConnection>-->
         <jdbcConnection driverClass="org.postgresql.Driver"
-                        connectionURL="jdbc:postgresql://172.25.16.246:6543/scs"
-                        userId="postgres"
+                        connectionURL="jdbc:postgresql://127.0.0.1:5432/scs"
+                        userId="sa"
                         password="6789@jkl">
         </jdbcConnection>
 
