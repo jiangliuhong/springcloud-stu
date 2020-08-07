@@ -10,12 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>数据实体-父工程</name>
-    <artifactId>scs-datamodal</artifactId>
+    <artifactId>scs-model</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>scs-datamodal-base</module>
-        <module>scs-datamodal-common</module>
+        <module>scs-model-base</module>
+        <module>scs-model-common</module>
     </modules>
 
 </project>

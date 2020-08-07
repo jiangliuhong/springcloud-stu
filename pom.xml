@@ -35,13 +35,21 @@
         <fastjson.version>1.2.70</fastjson.version>
 
         <!-- mybatis 相关 -->
-        <mapper-generator.version>1.0.0</mapper-generator.version>
-        <tk.mybatis.version>4.0.0</tk.mybatis.version>
+        <mapper-generator.version>1.1.5</mapper-generator.version>
+        <tk.mybatis.version>4.1.5</tk.mybatis.version>
         <mybatis-generator-core.version>1.3.6</mybatis-generator-core.version>
         <tk.mybatis.mapper-spring-boot-starter.version>2.1.5</tk.mybatis.mapper-spring-boot-starter.version>
         <!-- mybatis 相关 -->
 
         <lombok.version>1.18.12</lombok.version>
+        <persistence-api.version>1.0</persistence-api.version>
+
+        <!-- swagger -->
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <swagger-models.version>1.5.21</swagger-models.version>
+        <swagger-annotations.version>1.5.21</swagger-annotations.version>
+        <swagger-bootstrap-ui.version>1.9.5</swagger-bootstrap-ui.version>
+        <!-- swagger -->
     </properties>
 
     <dependencies>
@@ -62,7 +70,17 @@
             </dependency>
             <dependency>
                 <groupId>top.jiangliuhong.scs</groupId>
-                <artifactId>scs-datamodal-common</artifactId>
+                <artifactId>scs-model-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.jiangliuhong.scs</groupId>
+                <artifactId>scs-model-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.jiangliuhong.scs</groupId>
+                <artifactId>scs-data-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- scs module -->
@@ -87,6 +105,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence-api.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
@@ -121,6 +144,39 @@
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- swagger-ui配置 开始 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${swagger-bootstrap-ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger-models.version}</version>
+            </dependency>
+            <!-- swagger-ui配置 结束 -->
         </dependencies>
     </dependencyManagement>
 

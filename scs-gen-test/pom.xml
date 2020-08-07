@@ -14,8 +14,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+        <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
-            <artifactId>scs-datamodal-common</artifactId>
+            <artifactId>scs-model-common</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mybatis.generator</groupId>
@@ -30,6 +38,10 @@
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

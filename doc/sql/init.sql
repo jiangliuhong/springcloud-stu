@@ -10,6 +10,7 @@ create table db_base.t_route(
 	dt_create_time timestamp,
 	dt_update_time timestamp
 );
+comment on table db_base.t_route is '路由信息';
 COMMENT ON COLUMN db_base.t_route.c_name IS '名称';
 COMMENT ON COLUMN db_base.t_route.c_predicates IS '断言';
 COMMENT ON COLUMN db_base.t_route.c_url IS 'url';
@@ -36,7 +37,7 @@ create table db_base.t_client_details(
 	dt_create_time timestamp,
 	dt_update_time timestamp
 );
-
+comment on table db_base.t_client_details is '认证信息';
 COMMENT ON COLUMN db_base.t_client_details.c_client_id IS '应用标识';
 COMMENT ON COLUMN db_base.t_client_details.c_resource_ids IS '资源限定串(逗号分割)';
 COMMENT ON COLUMN db_base.t_client_details.c_client_secret IS '应用密钥(bcyt) 加密';
