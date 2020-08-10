@@ -1,4 +1,4 @@
-package top.jiangliuhong.scs.admin.api;
+package top.jiangliuhong.scs.base.api;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

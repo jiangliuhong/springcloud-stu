@@ -1,9 +1,10 @@
-package top.jiangliuhong.scs.admin;
+package top.jiangliuhong.scs.base;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 
 /**
  *
@@ -14,11 +15,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @version 1.0.0
  */
 @SpringBootApplication
-@EnableEurekaClient
 @EnableDiscoveryClient
-public class AdminApplication {
+@NacosPropertySource(dataId = "example", autoRefreshed = true)
+public class BaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run( AdminApplication.class, args );
+        SpringApplication.run( BaseApplication.class, args );
     }
 }

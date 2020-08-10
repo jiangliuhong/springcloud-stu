@@ -13,7 +13,7 @@
 
     <modules>
         <module>scs-eureka</module>
-        <module>scs-admin</module>
+        <module>scs-base</module>
         <module>scs-gateway</module>
         <module>scs-components</module>
         <module>scs-gen-test</module>
@@ -51,6 +51,10 @@
         <swagger-bootstrap-ui.version>1.9.5</swagger-bootstrap-ui.version>
         <!-- swagger -->
         <jackson-databind.version>2.10.0</jackson-databind.version>
+        <!-- alibaba -->
+        <spring-cloud-alibaba-nacos.version>2.2.1.RELEASE</spring-cloud-alibaba-nacos.version>
+        <nacos-config-spring-boot-starter.version>0.2.7</nacos-config-spring-boot-starter.version>
+        <!-- alibaba -->
     </properties>
 
     <dependencies>
@@ -85,6 +89,20 @@
                 <version>${project.version}</version>
             </dependency>
             <!-- scs module -->
+            <!-- alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${spring-cloud-alibaba-nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-config-spring-boot-starter.version}</version>
+            </dependency>
+            <!-- alibaba -->
+
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
