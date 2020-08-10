@@ -21,6 +21,11 @@
             <groupId>top.jiangliuhong.scs</groupId>
             <artifactId>scs-data-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>

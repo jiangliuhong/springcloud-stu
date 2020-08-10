@@ -18,7 +18,7 @@ public class BaseEntity {
      */
     @Id
     @Column(name = "c_id")
-    private String bh;
+    private String id;
 
     /**
      * dt_create_time
