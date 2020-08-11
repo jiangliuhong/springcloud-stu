@@ -33,7 +33,7 @@
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
         <postgresql.version>42.2.14</postgresql.version>
         <fastjson.version>1.2.70</fastjson.version>
-        <mysql.version>5.1.47</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
 
         <!-- mybatis 相关 -->
         <mapper-generator.version>1.1.5</mapper-generator.version>
