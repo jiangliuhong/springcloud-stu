@@ -17,5 +17,9 @@
             <groupId>top.jiangliuhong.scs</groupId>
             <artifactId>scs-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>top.jiangliuhong.scs</groupId>
+            <artifactId>scs-data-base</artifactId>
+        </dependency>
     </dependencies>
 </project>

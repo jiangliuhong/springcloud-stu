@@ -33,6 +33,7 @@
         <druid-spring-boot-starter.version>1.1.23</druid-spring-boot-starter.version>
         <postgresql.version>42.2.14</postgresql.version>
         <fastjson.version>1.2.70</fastjson.version>
+        <mysql.version>5.1.47</mysql.version>
 
         <!-- mybatis 相关 -->
         <mapper-generator.version>1.1.5</mapper-generator.version>
@@ -88,6 +89,11 @@
                 <artifactId>scs-data-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>top.jiangliuhong.scs</groupId>
+                <artifactId>scs-data-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- scs module -->
             <!-- alibaba -->
             <dependency>
@@ -119,6 +125,11 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>

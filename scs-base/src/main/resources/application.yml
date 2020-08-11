@@ -1,12 +1,7 @@
 server:
   port: 8002
-eureka:
-  client:
-    service-url:
-     defaultZone: http://localhost:8001/eureka
-  instance:
-    hostname: ${spring.cloud.client.ip-address}
-    instanceId: ${spring.cloud.client.ip-address}:${server.port}
 spring:
   application:
     name: scs-admin
+  datasource:
+    url: jdbc:mysql://127.0.0.1:13306/db_base?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
