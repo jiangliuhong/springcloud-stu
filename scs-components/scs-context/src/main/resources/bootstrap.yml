@@ -1,11 +1,19 @@
-nacos:
-  discovery:
-    server-addr: ${nacos.server}
 spring:
+  cloud:
+    nacos:
+      discovery:
+        namespace: dev
+        server-addr: ${scs.nacos.server}
+      config:
+        namespace: dev
+        server-addr: ${scs.nacos.server}
+        file-extension: yaml
+  profiles:
+    active: prod
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/db_base?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+    url: jdbc:mysql://${scs.datasource.ip}:${scs.datasource.port}/${scs.datasource.database}?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
     username: root
     password: root
     initialSize: 5

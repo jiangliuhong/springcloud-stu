@@ -4,8 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
-
 /**
  *
  * AdminApplication
@@ -17,7 +15,6 @@ import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@NacosPropertySource(dataId = "example", autoRefreshed = true)
 @tk.mybatis.spring.annotation.MapperScan(basePackages = "top.jiangliuhong.scs")
 public class BaseApplication {
 

@@ -2,6 +2,11 @@ server:
   port: 8002
 spring:
   application:
-    name: scs-admin
-  datasource:
-    url: jdbc:mysql://127.0.0.1:13306/db_base?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+    name: scs-base
+  cloud:
+    nacos:
+      config:
+        shared-configs:
+          - data-id: base.yml
+            group: scs
+            refresh: false

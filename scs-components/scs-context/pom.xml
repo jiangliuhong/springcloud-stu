@@ -9,11 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>scs-core</artifactId>
+    <artifactId>scs-context</artifactId>
 
     <name>核心组件</name>
 
     <dependencies>
+        <dependency>
+            <groupId>top.jiangliuhong.scs</groupId>
+            <artifactId>scs-commons</artifactId>
+        </dependency>
         <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
             <artifactId>scs-data-common</artifactId>
@@ -27,8 +31,9 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>2.2.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

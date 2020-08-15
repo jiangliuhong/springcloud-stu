@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import top.jiangliuhong.scs.core.bean.res.ErrorResponse;
+import top.jiangliuhong.scs.common.bean.res.ErrorResponse;
+import top.jiangliuhong.scs.common.exception.NotFoundException;
 
 /**
  *
@@ -48,10 +49,10 @@ public class ScsExceptionAdvice {
             status = HttpStatus.INTERNAL_SERVER_ERROR;
         }
         ErrorResponse error = new ErrorResponse();
-        error.setStatus(status);
+        error.setCode(status.value());
         error.setMessage(exception.getMessage());
         String stackTrace = ExceptionUtils.getStackTrace(exception);
         logger.error(stackTrace);
-        return ResponseEntity.status(error.getStatus()).body(error);
+        return ResponseEntity.status(status).body(error);
     }
 }

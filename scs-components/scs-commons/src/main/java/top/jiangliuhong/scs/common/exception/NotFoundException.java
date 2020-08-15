@@ -1,4 +1,4 @@
-package top.jiangliuhong.scs.core.exception;
+package top.jiangliuhong.scs.common.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException() {
