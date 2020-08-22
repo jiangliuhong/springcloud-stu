@@ -16,6 +16,10 @@
     <dependencies>
         <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
+            <artifactId>scs-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.jiangliuhong.scs</groupId>
             <artifactId>scs-starter-log</artifactId>
         </dependency>
         <dependency>
