@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
-            <artifactId>scs-data-base</artifactId>
+            <artifactId>scs-model</artifactId>
         </dependency>
     </dependencies>
 </project>

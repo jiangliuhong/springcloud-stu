@@ -17,6 +17,7 @@
         <module>scs-gateway</module>
         <module>scs-components</module>
         <module>scs-gen-test</module>
+        <module>scs-uaa</module>
     </modules>
 
 
@@ -55,7 +56,10 @@
         <!-- alibaba -->
         <spring-cloud-alibaba-nacos.version>2.2.1.RELEASE</spring-cloud-alibaba-nacos.version>
         <nacos-config-spring-boot-starter.version>0.2.7</nacos-config-spring-boot-starter.version>
+        <transmittable.version>2.11.5</transmittable.version>
         <!-- alibaba -->
+        <redisson-starter.version>3.11.5</redisson-starter.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
     <dependencies>
@@ -63,6 +67,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 
@@ -76,12 +88,7 @@
             </dependency>
             <dependency>
                 <groupId>top.jiangliuhong.scs</groupId>
-                <artifactId>scs-model-common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>top.jiangliuhong.scs</groupId>
-                <artifactId>scs-model-base</artifactId>
+                <artifactId>scs-model</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -91,15 +98,27 @@
             </dependency>
             <dependency>
                 <groupId>top.jiangliuhong.scs</groupId>
-                <artifactId>scs-data-common</artifactId>
+                <artifactId>scs-starter-log</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>top.jiangliuhong.scs</groupId>
-                <artifactId>scs-data-base</artifactId>
+                <artifactId>scs-starter-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.jiangliuhong.scs</groupId>
+                <artifactId>scs-starter-auth-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- scs module -->
+            <!-- 在Redis基础上的一个Java实用工具包 -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-starter.version}</version>
+            </dependency>
+            <!-- 在Redis基础上的一个Java实用工具包 -->
             <!-- alibaba -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -110,6 +129,11 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${spring-cloud-alibaba-nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable.version}</version>
             </dependency>
             <!-- alibaba -->
 
@@ -217,6 +241,11 @@
                 <version>${swagger-models.version}</version>
             </dependency>
             <!-- swagger-ui配置 结束 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

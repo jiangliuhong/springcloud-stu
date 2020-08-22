@@ -22,10 +22,6 @@
             <artifactId>postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>top.jiangliuhong.scs</groupId>
-            <artifactId>scs-model-common</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <scope>compile</scope>

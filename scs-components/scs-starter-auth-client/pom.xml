@@ -9,8 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>公共组件</name>
-    <artifactId>scs-commons</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>scs-starter-auth-client</artifactId>
+    <name>认证客户端通用组件</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

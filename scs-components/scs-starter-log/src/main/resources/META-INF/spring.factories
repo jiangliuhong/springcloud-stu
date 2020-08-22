@@ -1,0 +1,8 @@
+org.springframework.context.ApplicationContextInitializer=\
+top.jiangliuhong.scs.log.config.TtlMDCAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+top.jiangliuhong.scs.log.config.LogAutoConfigure,\
+top.jiangliuhong.scs.log.service.impl.LoggerAuditServiceImpl,\
+top.jiangliuhong.scs.log.service.impl.DbAuditServiceImpl,\
+top.jiangliuhong.scs.log.aspect.AuditLogAspect

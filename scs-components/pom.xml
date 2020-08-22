@@ -17,8 +17,10 @@
         <module>scs-context</module>
         <module>scs-commons</module>
         <module>scs-model</module>
-        <module>scs-data</module>
         <module>scs-starter-swagger</module>
+        <module>scs-starter-auth-client</module>
+        <module>scs-starter-log</module>
+        <module>scs-starter-redis</module>
     </modules>
 
 
