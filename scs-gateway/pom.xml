@@ -16,15 +16,15 @@
     <dependencies>
         <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
-            <artifactId>scs-context</artifactId>
+            <artifactId>scs-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.jiangliuhong.scs</groupId>
+            <artifactId>scs-starter-nacos</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -39,8 +39,8 @@
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

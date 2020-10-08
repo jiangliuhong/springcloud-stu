@@ -7,6 +7,4 @@ spring:
     nacos:
       config:
         shared-configs:
-          - data-id: base.yml
-            group: scs
-            refresh: false
+          - data-id: scs-core.yml

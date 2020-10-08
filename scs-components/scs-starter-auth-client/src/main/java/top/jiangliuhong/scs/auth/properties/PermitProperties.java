@@ -1,6 +1,7 @@
 package top.jiangliuhong.scs.auth.properties;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import lombok.Getter;
@@ -38,12 +39,8 @@ public class PermitProperties {
             return ENDPOINTS;
         }
         List<String> list = new ArrayList<>();
-        for (String url : ENDPOINTS) {
-            list.add(url);
-        }
-        for (String url : httpUrls) {
-            list.add(url);
-        }
-        return list.toArray(new String[list.size()]);
+        list.addAll(Arrays.asList(ENDPOINTS));
+        list.addAll(Arrays.asList(httpUrls));
+        return list.toArray(new String[0]);
     }
 }

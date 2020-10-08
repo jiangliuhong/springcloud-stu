@@ -26,9 +26,4 @@ public class AuthProperties {
      * token自动续签配置（目前只有redis实现）
      */
     private RenewProperties renew = new RenewProperties();
-
-    /**
-     * url权限配置
-     */
-    private UrlPermissionProperties urlPermission = new UrlPermissionProperties();
 }

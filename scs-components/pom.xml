@@ -21,6 +21,7 @@
         <module>scs-starter-auth-client</module>
         <module>scs-starter-log</module>
         <module>scs-starter-redis</module>
+        <module>scs-starter-nacos</module>
     </modules>
 
 

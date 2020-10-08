@@ -1,0 +1,10 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: scs-uaa
+  cloud:
+    nacos:
+      config:
+        shared-configs:
+          - data-id: scs-core.yml

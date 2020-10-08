@@ -27,7 +27,6 @@ import top.jiangliuhong.scs.log.service.IAuditService;
 /**
  * AuditLogAspect
  * 
- * @description
  * @author jiangliuhong
  * @date 2020/8/22 6:21 下午
  * @version 1.0.0

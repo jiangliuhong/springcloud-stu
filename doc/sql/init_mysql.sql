@@ -12,22 +12,18 @@ create table db_base.t_route(
 -- 初始化一条测试数据
 INSERT INTO db_base.t_route(c_id, c_name, c_predicates, c_url, c_filters) VALUES ('scs-blog', '我的博客', '["Path=/blog/**"]', 'https://jiangliuhong.top/', '["RewritePath=/blog(?<segment>/?.*), $\\{segment}"]');
 
--- 创建认证信息表
-create table db_base.t_client_details(
-	c_id char(32) primary key not null comment 'id',
-	c_client_id varchar(300) comment '应用标识',
-	c_resource_ids varchar(300) comment '资源限定串(逗号分割)',
-	c_client_secret varchar(300) comment '应用密钥(bcyt) 加密',
-	c_client_secret_str varchar(300) comment '应用密钥(明文)',
-	c_scope varchar(300) comment '范围',
-	c_grant_types varchar(300) comment '5种oauth授权方式(authorization_code,password,refresh_token,client_credentials)',
-	c_redirect_url varchar(900) comment '回调地址',
-	c_authorities varchar(300) comment '权限',
-	n_access_token_validity int comment 'access_token有效期',
-	n_refresh_token_validity int comment 'refresh_token有效期',
-	c_auto_approve varchar(300) comment '是否自动授权 1 是 2 否',
-  j_ext text comment '扩展属性',
-	dt_create_time timestamp DEFAULT CURRENT_TIMESTAMP comment '创建时间',
-	dt_update_time timestamp DEFAULT CURRENT_TIMESTAMP comment '修改时间'
+create table oauth_client_details (
+    client_id VARCHAR(256) PRIMARY KEY,
+    resource_ids VARCHAR(256),
+    client_secret VARCHAR(256),
+    scope VARCHAR(256),
+    authorized_grant_types VARCHAR(256),
+    web_server_redirect_uri VARCHAR(256),
+    authorities VARCHAR(256),
+    access_token_validity INTEGER,
+    refresh_token_validity INTEGER,
+    additional_information VARCHAR(4096),
+    autoapprove VARCHAR(256)
 ) comment '认证信息';
+
 
