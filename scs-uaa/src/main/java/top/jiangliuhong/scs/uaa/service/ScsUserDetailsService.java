@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
+import top.jiangliuhong.scs.uaa.bean.ScsUser;
 
 /**
  * UserDetailsServiceImpl <br/>
@@ -46,7 +47,9 @@ public class ScsUserDetailsService implements UserDetailsService {
             // return new org.springframework.security.core.userdetails.User(username,password, authorities);
 
             // 返回自定义的 KiteUserDetails
-            User user = new User(username, password, authorities);
+            ScsUser user = new ScsUser(username, password, authorities);
+            user.setCorp("xxxx");
+            user.setDept("xxxzaa");
             return user;
         }
     }

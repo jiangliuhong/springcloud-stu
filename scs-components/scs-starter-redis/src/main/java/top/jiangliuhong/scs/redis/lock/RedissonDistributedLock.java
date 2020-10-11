@@ -17,7 +17,7 @@ import top.jiangliuhong.scs.common.lock.DistributedLock;
  * 本接口能满足绝大部分的需求，高级的锁功能，请自行扩展或直接使用原生api
  */
 @ConditionalOnClass(RedissonClient.class)
-@ConditionalOnProperty(prefix = "zlt.lock", name = "lockerType", havingValue = "REDIS", matchIfMissing = true)
+@ConditionalOnProperty(prefix = "scs.lock", name = "lockerType", havingValue = "REDIS", matchIfMissing = true)
 public class RedissonDistributedLock implements DistributedLock {
 
     @Autowired

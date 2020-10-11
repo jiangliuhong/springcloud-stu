@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -18,6 +19,8 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import top.jiangliuhong.scs.uaa.handle.CustomAuthenticationEntryPoint;
+import top.jiangliuhong.scs.uaa.handle.CustomClientCredentialsTokenEndpointFilter;
 import top.jiangliuhong.scs.uaa.service.ScsUserDetailsService;
 
 /**
@@ -43,6 +46,10 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     private TokenStore jwtTokenStore;
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
 
     @Override
     public void configure(final AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
@@ -67,10 +74,16 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        CustomClientCredentialsTokenEndpointFilter endpointFilter
+            = new CustomClientCredentialsTokenEndpointFilter(security);
+        endpointFilter.afterPropertiesSet();
+        endpointFilter.setAuthenticationEntryPoint(customAuthenticationEntryPoint);
+        // 客户端认证之前的过滤器
+        security.addTokenEndpointAuthenticationFilter(endpointFilter);
         // 允许客户端访问 OAuth2 授权接口
-        security.allowFormAuthenticationForClients();
+//        security.allowFormAuthenticationForClients();
         // 允许已授权用户访问 checkToken 接口和获取 token 接口
-        security.checkTokenAccess("isAuthenticated()");
-        security.tokenKeyAccess("isAuthenticated()");
+//        security.checkTokenAccess("isAuthenticated()");
+//        security.tokenKeyAccess("isAuthenticated()");
     }
 }

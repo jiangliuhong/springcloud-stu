@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>top.jiangliuhong.scs</groupId>
-            <artifactId>scs-starter-redis</artifactId>
+            <artifactId>scs-commons</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -30,6 +30,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 

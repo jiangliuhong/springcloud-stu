@@ -42,8 +42,11 @@ public class RedisAutoConfigure {
     /**
      * RedisTemplate配置
      * @param factory
+     * @param redisKeySerializer
+     * @param redisValueSerializer
+     * @return
      */
-    @Bean
+    @Bean("redisTemplate")
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory
             , RedisSerializer<String> redisKeySerializer, RedisSerializer<Object> redisValueSerializer) {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
@@ -57,7 +60,6 @@ public class RedisAutoConfigure {
     }
 
     @Bean(name = "cacheManager")
-    @Primary
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory
             , RedisSerializer<String> redisKeySerializer, RedisSerializer<Object> redisValueSerializer) {
         RedisCacheConfiguration difConf = getDefConf(redisKeySerializer, redisValueSerializer).entryTtl(Duration.ofHours(1));
