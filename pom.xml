@@ -58,7 +58,7 @@
         <transmittable.version>2.11.5</transmittable.version>
         <!-- alibaba -->
         <redisson-starter.version>3.11.5</redisson-starter.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
     </properties>
 
     <dependencies>
